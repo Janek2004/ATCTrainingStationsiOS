@@ -13,4 +13,7 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #define BEACON_URL @"http://localhost/Badges/wp/awards/?missions_json=1"
+    
+
 #endif

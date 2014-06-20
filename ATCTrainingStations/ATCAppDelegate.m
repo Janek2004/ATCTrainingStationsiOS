@@ -7,11 +7,26 @@
 //
 
 #import "ATCAppDelegate.h"
+#import "ATCBlueBackgroundView.h"
+#import "ATCBeaconNetworkUtilities.h"
+
 
 @implementation ATCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+   
+    UIImage * image = [[UIImage imageNamed:@"toolbar"]resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];;
+    
+    [[UIToolbar appearance]setBackgroundImage:image forToolbarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    [[UIToolbar appearance]setBackgroundImage:image forToolbarPosition:UIBarPositionAny barMetrics:UIBarMetricsLandscapePhone];
+    
+    [[ATCBlueBackgroundView appearance]setBackgroundColor:[UIColor colorWithRed:205.0/255 green:236.0/255  blue:249.0/255 alpha:1]];
+    ATCBeaconNetworkUtilities * beacon = [[ATCBeaconNetworkUtilities alloc]init];
+    [beacon getDataWithCompletionHandler:^(NSData *data, NSError *error) {
+            
+    }];
+    
     // Override point for customization after application launch.
     return YES;
 }

@@ -21,6 +21,8 @@
 		4FA974991948EB930031167C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA9747B1948EB930031167C /* UIKit.framework */; };
 		4FA974A11948EB930031167C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FA9749F1948EB930031167C /* InfoPlist.strings */; };
 		4FA974A31948EB930031167C /* ATCTrainingStationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA974A21948EB930031167C /* ATCTrainingStationsTests.m */; };
+		4FFC0C3C1953694300F75345 /* ATCBlueBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C3B1953694300F75345 /* ATCBlueBackgroundView.m */; };
+		4FFC0C4119536EC900F75345 /* ATCBeaconNetworkUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C4019536EC900F75345 /* ATCBeaconNetworkUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		4FA9749E1948EB930031167C /* ATCTrainingStationsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ATCTrainingStationsTests-Info.plist"; sourceTree = "<group>"; };
 		4FA974A01948EB930031167C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4FA974A21948EB930031167C /* ATCTrainingStationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATCTrainingStationsTests.m; sourceTree = "<group>"; };
+		4FFC0C3A1953694300F75345 /* ATCBlueBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCBlueBackgroundView.h; sourceTree = "<group>"; };
+		4FFC0C3B1953694300F75345 /* ATCBlueBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCBlueBackgroundView.m; sourceTree = "<group>"; };
+		4FFC0C3F19536EC900F75345 /* ATCBeaconNetworkUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCBeaconNetworkUtilities.h; sourceTree = "<group>"; };
+		4FFC0C4019536EC900F75345 /* ATCBeaconNetworkUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCBeaconNetworkUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +120,11 @@
 			children = (
 				4FA974861948EB930031167C /* ATCAppDelegate.h */,
 				4FA974871948EB930031167C /* ATCAppDelegate.m */,
+				4FFC0C3A1953694300F75345 /* ATCBlueBackgroundView.h */,
+				4FFC0C3B1953694300F75345 /* ATCBlueBackgroundView.m */,
 				4FA974891948EB930031167C /* Main.storyboard */,
+				4FFC0C3F19536EC900F75345 /* ATCBeaconNetworkUtilities.h */,
+				4FFC0C4019536EC900F75345 /* ATCBeaconNetworkUtilities.m */,
 				4FA9748C1948EB930031167C /* ATCViewController.h */,
 				4FA9748D1948EB930031167C /* ATCViewController.m */,
 				4FA9748F1948EB930031167C /* Images.xcassets */,
@@ -250,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FFC0C4119536EC900F75345 /* ATCBeaconNetworkUtilities.m in Sources */,
 				4FA974841948EB930031167C /* main.m in Sources */,
+				4FFC0C3C1953694300F75345 /* ATCBlueBackgroundView.m in Sources */,
 				4FA9748E1948EB930031167C /* ATCViewController.m in Sources */,
 				4FA974881948EB930031167C /* ATCAppDelegate.m in Sources */,
 			);
@@ -457,6 +469,7 @@
 				4FA974A81948EB930031167C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FA974A91948EB930031167C /* Build configuration list for PBXNativeTarget "ATCTrainingStationsTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +478,7 @@
 				4FA974AB1948EB930031167C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

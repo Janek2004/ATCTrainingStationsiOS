@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CUI-2Q-XHA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="ogO-ng-9dX">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="CUI-2Q-XHA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b1x-DT-EcR">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="uLW-re-tuv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JrS-Ub-slk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-690" y="200"/>
+        </scene>
+        <!--HomeViewController-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ATCViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="vXZ-lx-hvc" userLabel="HomeViewController" customClass="ATCViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,13 +30,199 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgq-SG-Q0b">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Missions" id="GBr-9q-T38">
+                                        <connections>
+                                            <segue destination="yMj-3T-MkY" kind="push" id="UY8-Zp-LOx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.80392163989999998" green="0.92549026010000002" blue="0.97647064920000004" alpha="1" colorSpace="deviceRGB"/>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="25" text="Bluetooth Indicator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hew-oZ-Tc2">
+                                <rect key="frame" x="0.0" y="108" width="320" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="26" text="Nursing Lab Mission" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y1-Ba-Bsf">
+                                <rect key="frame" x="0.0" y="542" width="320" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.24999999999999967" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="compass_icon" translatesAutoresizingMaskIntoConstraints="NO" id="KHu-Pe-Bju">
+                                <rect key="frame" x="40" y="193" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80392163989999998" green="0.92549026010000002" blue="0.97647064920000004" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5Y1-Ba-Bsf" secondAttribute="bottom" id="5Bo-f4-hot"/>
+                            <constraint firstItem="hew-oZ-Tc2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="108" id="5yW-Sz-09J"/>
+                            <constraint firstItem="Lgq-SG-Q0b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8G2-7a-RPn"/>
+                            <constraint firstItem="hew-oZ-Tc2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="CBP-yC-yns"/>
+                            <constraint firstAttribute="bottom" secondItem="5Y1-Ba-Bsf" secondAttribute="bottom" id="CJg-Sw-rmt"/>
+                            <constraint firstItem="5Y1-Ba-Bsf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="IMk-wD-bpq"/>
+                            <constraint firstAttribute="trailing" secondItem="hew-oZ-Tc2" secondAttribute="trailing" id="KXj-ew-Qh3"/>
+                            <constraint firstAttribute="trailing" secondItem="Lgq-SG-Q0b" secondAttribute="trailing" id="XLq-MA-sDC"/>
+                            <constraint firstItem="hew-oZ-Tc2" firstAttribute="centerX" secondItem="5Y1-Ba-Bsf" secondAttribute="centerX" id="ccr-2J-9xE"/>
+                            <constraint firstItem="Lgq-SG-Q0b" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="64" id="fmp-NC-kpS"/>
+                            <constraint firstAttribute="trailing" secondItem="5Y1-Ba-Bsf" secondAttribute="trailing" id="p2A-R2-SB8"/>
+                            <constraint firstItem="hew-oZ-Tc2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="zDY-xP-Fcr"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Training Stations" id="dcZ-jg-tdU"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-101" y="194"/>
+        </scene>
+        <!--Missions-->
+        <scene sceneID="nBS-3M-Unu">
+            <objects>
+                <tableViewController storyboardIdentifier="MissionsViewController" title="Missions" id="yMj-3T-MkY" userLabel="Missions" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EeZ-ak-bBx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="8sE-oD-Y0y">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SVv-ZO-5o6">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SVv-ZO-5o6" id="Xst-zN-QFk">
+                                            <rect key="frame" x="0.0" y="0.0" width="281" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nursing Lab" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ma-p0-znO">
+                                                    <rect key="frame" x="113" y="11" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="aHD-fg-EjQ" kind="push" id="v6R-FX-0Rw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="MjD-gv-vjN">
+                                        <rect key="frame" x="0.0" y="108" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MjD-gv-vjN" id="YRI-PY-eU5">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orientation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQC-tN-lVm">
+                                                    <rect key="frame" x="118" y="11" width="85" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tqz-Yd-LGP">
+                                        <rect key="frame" x="0.0" y="152" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tqz-Yd-LGP" id="Qx9-sV-2ko">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Mission" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSs-LE-b4T">
+                                                    <rect key="frame" x="117" y="11" width="87" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="yMj-3T-MkY" id="UdR-rY-dJp"/>
+                            <outlet property="delegate" destination="yMj-3T-MkY" id="Rgb-pA-tIv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Missions" id="xIT-ji-GcI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQR-mv-wF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="194"/>
+        </scene>
+        <!--View Controller - Nursing Lab-->
+        <scene sceneID="EmU-X6-6yq">
+            <objects>
+                <viewController title="Nursing Lab" id="aHD-fg-EjQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="llc-IG-T99"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Hc-RO-rVo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zLn-LN-dTC" customClass="ATCBlueBackgroundView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lab" translatesAutoresizingMaskIntoConstraints="NO" id="pGo-xi-MMQ">
+                                <rect key="frame" x="0.0" y="65" width="320" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aY5-8Q-xz5">
+                                <rect key="frame" x="0.0" y="236" width="320" height="332"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">The UWF Department of Nursing is positioned to address these recommendations, offering an undergraduate program with both traditional nursing pre-licensure and RN to BSN bridge tracks. The number of baccalaureate students entering the pre-licensure program has increased to 50 and the RN-BSN track currently boasts &gt;100 students. Plans include adding an accelerated second degree track for adults who have a baccalaureate in another field and are making a mid-career change to nursing. An RN-BSN/MSN option is under consideration to allow qualified registered nurses a seamless transition to graduate education.</mutableString>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzi-9J-rGm">
+                                <rect key="frame" x="96" y="502" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start/Stop Mission">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80392163989999998" green="0.92549026010000002" blue="0.97647064920000004" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Nursing Lab" id="sjm-qc-Xqh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9mI-vB-9tJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724" y="200"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="JRt-cc-erC">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="aeA-Zv-UaM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGs-RY-vh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="884"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="compass_icon" width="650" height="650"/>
+        <image name="lab" width="440" height="248"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
