@@ -9,12 +9,23 @@
 #import "ATCAppDelegate.h"
 #import "ATCBlueBackgroundView.h"
 #import "ATCBeaconNetworkUtilities.h"
+#import "ATCApplicationState.h"
 
 
 @implementation ATCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    self.deviceId =[defaults objectForKey:@"NSUUID"];
+    
+    if(!self.deviceId){
+        NSString * uuid = [[NSUUID UUID]UUIDString];
+        [defaults setObject:uuid forKey:@"NSUUID"];
+        self.deviceId = uuid;
+    }
    
     UIImage * image = [[UIImage imageNamed:@"toolbar"]resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];;
     
@@ -23,9 +34,13 @@
     
     [[ATCBlueBackgroundView appearance]setBackgroundColor:[UIColor colorWithRed:205.0/255 green:236.0/255  blue:249.0/255 alpha:1]];
     ATCBeaconNetworkUtilities * beacon = [[ATCBeaconNetworkUtilities alloc]init];
-    [beacon getDataWithCompletionHandler:^(NSData *data, NSError *error) {
+    [beacon getDataWithCompletionHandler:^(NSDictionary *data, NSError *error) {
             
     }];
+    
+    _application_state = [[ATCApplicationState alloc]init];
+    
+    
     
     // Override point for customization after application launch.
     return YES;

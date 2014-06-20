@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@import CoreLocation;
 
 @interface ATCBeaconNetworkUtilities : NSObject
 
 //send request
--(void)getDataWithCompletionHandler:(void (^)(NSData *data, NSError *error))completionBlock;
-
+-(void)getDataWithCompletionHandler:(void (^)(NSDictionary *data, NSError *error))completionBlock;
+-(void)getDataForBeaconMajor:(int)major minor:(int)minor proximityId:(NSString *)proximityID proximity:(CLProximity) proximity WithCompletionHandler:(void (^)(NSDictionary *data, NSError *error))completionBlock;
 //parse
 
 @end

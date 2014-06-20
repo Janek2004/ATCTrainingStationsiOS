@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ATCApplicationState;
 
 @interface ATCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSString * deviceId;
+@property (strong, nonatomic) ATCApplicationState * application_state;
 
 @end

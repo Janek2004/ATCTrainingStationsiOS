@@ -23,6 +23,11 @@
 		4FA974A31948EB930031167C /* ATCTrainingStationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA974A21948EB930031167C /* ATCTrainingStationsTests.m */; };
 		4FFC0C3C1953694300F75345 /* ATCBlueBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C3B1953694300F75345 /* ATCBlueBackgroundView.m */; };
 		4FFC0C4119536EC900F75345 /* ATCBeaconNetworkUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C4019536EC900F75345 /* ATCBeaconNetworkUtilities.m */; };
+		4FFC0C4419547DA100F75345 /* JMCBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C4319547DA100F75345 /* JMCBeaconManager.m */; };
+		4FFC0C481954808900F75345 /* ATCApplicationState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C471954808900F75345 /* ATCApplicationState.m */; };
+		4FFC0C4B195480D100F75345 /* ATCMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C4A195480D100F75345 /* ATCMission.m */; };
+		4FFC0C4F1954826500F75345 /* ATCStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C4E1954826500F75345 /* ATCStation.m */; };
+		4FFC0C521954843C00F75345 /* ATCContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C511954843C00F75345 /* ATCContent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,16 @@
 		4FFC0C3B1953694300F75345 /* ATCBlueBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCBlueBackgroundView.m; sourceTree = "<group>"; };
 		4FFC0C3F19536EC900F75345 /* ATCBeaconNetworkUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCBeaconNetworkUtilities.h; sourceTree = "<group>"; };
 		4FFC0C4019536EC900F75345 /* ATCBeaconNetworkUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCBeaconNetworkUtilities.m; sourceTree = "<group>"; };
+		4FFC0C4219547DA100F75345 /* JMCBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCBeaconManager.h; sourceTree = "<group>"; };
+		4FFC0C4319547DA100F75345 /* JMCBeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCBeaconManager.m; sourceTree = "<group>"; };
+		4FFC0C461954808900F75345 /* ATCApplicationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCApplicationState.h; sourceTree = "<group>"; };
+		4FFC0C471954808900F75345 /* ATCApplicationState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCApplicationState.m; sourceTree = "<group>"; };
+		4FFC0C49195480D100F75345 /* ATCMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATCMission.h; path = Models/ATCMission.h; sourceTree = "<group>"; };
+		4FFC0C4A195480D100F75345 /* ATCMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATCMission.m; path = Models/ATCMission.m; sourceTree = "<group>"; };
+		4FFC0C4D1954826500F75345 /* ATCStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATCStation.h; path = Models/ATCStation.h; sourceTree = "<group>"; };
+		4FFC0C4E1954826500F75345 /* ATCStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATCStation.m; path = Models/ATCStation.m; sourceTree = "<group>"; };
+		4FFC0C501954843B00F75345 /* ATCContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATCContent.h; path = Models/ATCContent.h; sourceTree = "<group>"; };
+		4FFC0C511954843C00F75345 /* ATCContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATCContent.m; path = Models/ATCContent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +137,9 @@
 				4FA974871948EB930031167C /* ATCAppDelegate.m */,
 				4FFC0C3A1953694300F75345 /* ATCBlueBackgroundView.h */,
 				4FFC0C3B1953694300F75345 /* ATCBlueBackgroundView.m */,
+				4FFC0C4C195480D600F75345 /* Models */,
 				4FA974891948EB930031167C /* Main.storyboard */,
-				4FFC0C3F19536EC900F75345 /* ATCBeaconNetworkUtilities.h */,
-				4FFC0C4019536EC900F75345 /* ATCBeaconNetworkUtilities.m */,
+				4FFC0C4519547F3500F75345 /* Managers */,
 				4FA9748C1948EB930031167C /* ATCViewController.h */,
 				4FA9748D1948EB930031167C /* ATCViewController.m */,
 				4FA9748F1948EB930031167C /* Images.xcassets */,
@@ -160,6 +175,32 @@
 				4FA9749F1948EB930031167C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4FFC0C4519547F3500F75345 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4FFC0C461954808900F75345 /* ATCApplicationState.h */,
+				4FFC0C471954808900F75345 /* ATCApplicationState.m */,
+				4FFC0C3F19536EC900F75345 /* ATCBeaconNetworkUtilities.h */,
+				4FFC0C4019536EC900F75345 /* ATCBeaconNetworkUtilities.m */,
+				4FFC0C4219547DA100F75345 /* JMCBeaconManager.h */,
+				4FFC0C4319547DA100F75345 /* JMCBeaconManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		4FFC0C4C195480D600F75345 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4FFC0C49195480D100F75345 /* ATCMission.h */,
+				4FFC0C4A195480D100F75345 /* ATCMission.m */,
+				4FFC0C4D1954826500F75345 /* ATCStation.h */,
+				4FFC0C4E1954826500F75345 /* ATCStation.m */,
+				4FFC0C501954843B00F75345 /* ATCContent.h */,
+				4FFC0C511954843C00F75345 /* ATCContent.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FFC0C4F1954826500F75345 /* ATCStation.m in Sources */,
+				4FFC0C4419547DA100F75345 /* JMCBeaconManager.m in Sources */,
+				4FFC0C4B195480D100F75345 /* ATCMission.m in Sources */,
 				4FFC0C4119536EC900F75345 /* ATCBeaconNetworkUtilities.m in Sources */,
 				4FA974841948EB930031167C /* main.m in Sources */,
+				4FFC0C481954808900F75345 /* ATCApplicationState.m in Sources */,
+				4FFC0C521954843C00F75345 /* ATCContent.m in Sources */,
 				4FFC0C3C1953694300F75345 /* ATCBlueBackgroundView.m in Sources */,
 				4FA9748E1948EB930031167C /* ATCViewController.m in Sources */,
 				4FA974881948EB930031167C /* ATCAppDelegate.m in Sources */,

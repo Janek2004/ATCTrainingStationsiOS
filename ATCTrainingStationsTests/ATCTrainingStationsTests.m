@@ -7,9 +7,9 @@
 //
 
 #import <XCTest/XCTest.h>
-
+#import "ATCBeaconNetworkUtilities.h"
 @interface ATCTrainingStationsTests : XCTestCase
-
+@property (nonatomic,strong) ATCBeaconNetworkUtilities * utilities;
 @end
 
 @implementation ATCTrainingStationsTests
@@ -18,6 +18,7 @@
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    _utilities = [ATCBeaconNetworkUtilities new];
 }
 
 - (void)tearDown
@@ -26,9 +27,21 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+
+-(void)testJSON{
+    __block BOOL waitingForBlock = YES;
+    [_utilities getDataWithCompletionHandler:^(NSDictionary *data, NSError *error) {
+        NSLog(@"data %@",data);
+        XCTAssertFalse(error!=NULL, @"Error %@ %s",error, __PRETTY_FUNCTION__);
+        waitingForBlock = NO;
+    }];
+
+    while(waitingForBlock) {
+       [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
+                                 beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
+    }
+    
 }
+
 
 @end

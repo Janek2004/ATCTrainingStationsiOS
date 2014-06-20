@@ -14,6 +14,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #define BEACON_URL @"http://localhost/Badges/wp/awards/?missions_json=1"
-    
+    #define BEACON_UUID @"ATC_BEACON"
 
 #endif
