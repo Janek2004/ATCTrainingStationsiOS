@@ -11,6 +11,11 @@
 @interface ATCApplicationState : NSObject
     @property(nonatomic, copy) void (^messageBlock)(NSString * message, BOOL show);
     @property (nonatomic,strong) NSNumber * currentMissionId;
-    @property (nonatomic,strong) NSDictionary * missions;
+    @property (nonatomic,strong) NSMutableDictionary * missions;
+    @property (nonatomic,strong) NSMutableDictionary * stations;
+    @property (nonatomic,assign) BOOL offlineMode;
+    @property (nonatomic, assign) BOOL bluetoothEnabled;
+
+
 
 @end

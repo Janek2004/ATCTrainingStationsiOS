@@ -151,14 +151,15 @@
     for(CLBeacon *beacon in beacons)
     {
        
-//        if(proximity != beacon.proximity){
+        if(proximity != beacon.proximity){
             proximity = beacon.proximity;
             [self logMessage:[NSString stringWithFormat:@"Beacon range: %@",beacon]];
             NSLog(@"Beacon proximity is: %d",beacon.proximity);
             NSLog(@"Beacon found: %@",beacon);
-            self.beaconFound(beacon.major.intValue, beacon.minor.intValue, beacon.proximity);
-
-        //    }
+            if(self.beaconFound){
+                self.beaconFound(beacon.major.intValue, beacon.minor.intValue, beacon.proximity);
+            }
+        }
       //  [self displayContentFor:beacon andRegion:region];
     }
         

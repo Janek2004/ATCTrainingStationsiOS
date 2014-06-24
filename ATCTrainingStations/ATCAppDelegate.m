@@ -17,7 +17,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    
+    _application_state = [[ATCApplicationState alloc]init];
+
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     self.deviceId =[defaults objectForKey:@"NSUUID"];
     
@@ -33,12 +34,7 @@
     [[UIToolbar appearance]setBackgroundImage:image forToolbarPosition:UIBarPositionAny barMetrics:UIBarMetricsLandscapePhone];
     
     [[ATCBlueBackgroundView appearance]setBackgroundColor:[UIColor colorWithRed:205.0/255 green:236.0/255  blue:249.0/255 alpha:1]];
-    ATCBeaconNetworkUtilities * beacon = [[ATCBeaconNetworkUtilities alloc]init];
-    [beacon getDataWithCompletionHandler:^(NSDictionary *data, NSError *error) {
-            
-    }];
-    
-    _application_state = [[ATCApplicationState alloc]init];
+        
     
     
     

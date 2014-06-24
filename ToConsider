@@ -1,0 +1,20 @@
+To Consider:
+
+What happens if user goes away from the 
+    patient/station
+    
+    - It needs to be indicated somehow
+    
+    Welcome Message
+        
+    
+    Goodbye Message
+
+    Choosing Station will result in starting ranging only beacon associated with the station.
+    
+    
+
+    We will be caching content to prevent overload of the system. Content will be refreshed every 5 minutes??
+
+    Or just based on content id?
+

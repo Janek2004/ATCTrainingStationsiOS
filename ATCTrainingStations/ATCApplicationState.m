@@ -9,6 +9,8 @@
 #import "ATCApplicationState.h"
 #import "JMCBeaconManager.h"
 #import "ATCBeaconNetworkUtilities.h"
+#import "ATCAppDelegate.h"
+
 @interface ATCApplicationState()
     @property(nonatomic, strong) JMCBeaconManager * beaconManager;
     @property(nonatomic, strong) ATCBeaconNetworkUtilities * networkManager;
@@ -20,8 +22,11 @@
     if(self = [super init]){
         _beaconManager = [JMCBeaconManager new];
         _networkManager = [ATCBeaconNetworkUtilities new];
-
+        _missions = [NSMutableDictionary new];
+        _stations = [NSMutableDictionary new];
+        
         [self startBeaconManager];
+        [self getMissions];
     }
     return self;
 }
@@ -32,18 +37,24 @@
     {
         if(self.messageBlock){
             //display error message
-            self.messageBlock(@"Not Enabled", YES);
-
-            }
+            self.messageBlock(@"Bluetooth Not Enabled", YES);
+            
+        }
     }
-    
+    else{
+        self.bluetoothEnabled = YES;
+    }
     
     __weak typeof(self) weakself = self;
     [_beaconManager registerBeaconWithProximityId:BEACON_UUID andIdentifier:@"ATC Beacon Identifier"];
-       //void (^completionBlock)(NSDictionary *data, NSError *error));
+    
     _beaconManager.beaconFound =^(int major, int minor, CLProximity  proximity){
+        
+        
+        
         // get content for beacon
         [[weakself networkManager] getDataForBeaconMajor:major minor:minor proximityId: BEACON_UUID proximity:proximity WithCompletionHandler:^(NSDictionary *data, NSError *error) {
+            
             
         }];
         
@@ -54,21 +65,48 @@
 }
 
 -(void)getMissions{
-//    [_networkManager getDataForBeaconWithCompletionHandler:^(NSDictionary *data, NSError *error) {
-//        if(error){
-//            //display error message
-//        }
-//        else{
-//            self.missions= data;
-//        }
-//        
-//    }];
+      [ _networkManager getDataWithCompletionHandler:^(NSDictionary *data, NSError *error) {
+          if(!error){
+              self.missions = [[data mutableCopy]objectForKey:@"missions"];
+              //NSLog(@"%@",self.missions);
+
+              //get all stations
+              for(id object in self.missions){
+                  
+                  if([object isKindOfClass:[NSDictionary class]]){
+                      NSArray * a = [object objectForKey:@"stations"];
+                      //copy stations
+                      NSMutableDictionary * locSt= [self.stations  mutableCopy];
+                      for(id station in a){
+                          [locSt setObject:station forKey: [station objectForKey:@"id"]];
+                      }
+                      self.stations = locSt;
+                  }
+                  else{
+                      //NSLog(@"%@",object);
+                  }
+              }
+              NSLog(@"Content Loaded");
+          
+           // ATCAppDelegate * d =  [[UIApplication sharedApplication]delegate];
+           // NSLog(@"d %@", d.application_state.missions);
+          //  NSLog(@"d %@", d.application_state.stations);
+          }
+          
+          
+    }];
 
 }
 
 
 -(void)addObservers{
     [[UIApplication sharedApplication]addObserver:self forKeyPath:@"backgroundRefreshStatus" options:NSKeyValueObservingOptionNew context:nil];
+    
+
+    
+    //[CLLocationManager isMonitoringAvailableForClass:[CLRegion class]] &&[CLLocationManager authorizationStatus ]== kCLAuthorizationStatusAuthorized;
+    
+    
     
 }
 
@@ -77,6 +115,10 @@
     if([keyPath isEqualToString:@"backgroundRefreshStatus"]){
         NSLog(@"Dictionary %@",change);
     }
+    
+    
+    
+    
 }
 
 

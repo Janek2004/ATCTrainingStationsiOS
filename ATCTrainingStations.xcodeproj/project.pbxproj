@@ -21,6 +21,22 @@
 		4FA974991948EB930031167C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA9747B1948EB930031167C /* UIKit.framework */; };
 		4FA974A11948EB930031167C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FA9749F1948EB930031167C /* InfoPlist.strings */; };
 		4FA974A31948EB930031167C /* ATCTrainingStationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA974A21948EB930031167C /* ATCTrainingStationsTests.m */; };
+		4FCF498D1958CC10007ADBB3 /* ATCImmediateContentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF498C1958CC10007ADBB3 /* ATCImmediateContentDetailsViewController.m */; };
+		4FCF498E1958CC10007ADBB3 /* ATCImmediateContentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF498C1958CC10007ADBB3 /* ATCImmediateContentDetailsViewController.m */; };
+		4FCF49911958CC5A007ADBB3 /* ATCNearbyDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49901958CC5A007ADBB3 /* ATCNearbyDetailsViewController.m */; };
+		4FCF49921958CC5A007ADBB3 /* ATCNearbyDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49901958CC5A007ADBB3 /* ATCNearbyDetailsViewController.m */; };
+		4FCF49951958CEB4007ADBB3 /* ATCFarContentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49941958CEB4007ADBB3 /* ATCFarContentDetailsViewController.m */; };
+		4FCF49961958CEB4007ADBB3 /* ATCFarContentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49941958CEB4007ADBB3 /* ATCFarContentDetailsViewController.m */; };
+		4FCF499A1958D5CC007ADBB3 /* ReusableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49991958D5CC007ADBB3 /* ReusableDataSource.m */; };
+		4FCF499B1958D5CC007ADBB3 /* ReusableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49991958D5CC007ADBB3 /* ReusableDataSource.m */; };
+		4FCF499F1958D9B5007ADBB3 /* ATCNearbyStationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF499E1958D9B5007ADBB3 /* ATCNearbyStationTableViewCell.m */; };
+		4FCF49A01958D9B5007ADBB3 /* ATCNearbyStationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF499E1958D9B5007ADBB3 /* ATCNearbyStationTableViewCell.m */; };
+		4FCF49A81959D3E2007ADBB3 /* ToConsider in Resources */ = {isa = PBXBuildFile; fileRef = 4FCF49A71959D3E2007ADBB3 /* ToConsider */; };
+		4FCF49A91959D3E2007ADBB3 /* ToConsider in Resources */ = {isa = PBXBuildFile; fileRef = 4FCF49A71959D3E2007ADBB3 /* ToConsider */; };
+		4FCF49AC1959D7F8007ADBB3 /* ATCBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49AB1959D7F8007ADBB3 /* ATCBeacon.m */; };
+		4FCF49AD1959D7F8007ADBB3 /* ATCBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49AB1959D7F8007ADBB3 /* ATCBeacon.m */; };
+		4FCF49B01959D9DD007ADBB3 /* ATCContentContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49AF1959D9DD007ADBB3 /* ATCContentContainerViewController.m */; };
+		4FCF49B11959D9DD007ADBB3 /* ATCContentContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49AF1959D9DD007ADBB3 /* ATCContentContainerViewController.m */; };
 		4FFC0C3C1953694300F75345 /* ATCBlueBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C3B1953694300F75345 /* ATCBlueBackgroundView.m */; };
 		4FFC0C4119536EC900F75345 /* ATCBeaconNetworkUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C4019536EC900F75345 /* ATCBeaconNetworkUtilities.m */; };
 		4FFC0C4419547DA100F75345 /* JMCBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C4319547DA100F75345 /* JMCBeaconManager.m */; };
@@ -60,6 +76,21 @@
 		4FA9749E1948EB930031167C /* ATCTrainingStationsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ATCTrainingStationsTests-Info.plist"; sourceTree = "<group>"; };
 		4FA974A01948EB930031167C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4FA974A21948EB930031167C /* ATCTrainingStationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATCTrainingStationsTests.m; sourceTree = "<group>"; };
+		4FCF498B1958CC10007ADBB3 /* ATCImmediateContentDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATCImmediateContentDetailsViewController.h; path = ViewControllers/ATCImmediateContentDetailsViewController.h; sourceTree = "<group>"; };
+		4FCF498C1958CC10007ADBB3 /* ATCImmediateContentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATCImmediateContentDetailsViewController.m; path = ViewControllers/ATCImmediateContentDetailsViewController.m; sourceTree = "<group>"; };
+		4FCF498F1958CC5A007ADBB3 /* ATCNearbyDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATCNearbyDetailsViewController.h; path = ViewControllers/ATCNearbyDetailsViewController.h; sourceTree = "<group>"; };
+		4FCF49901958CC5A007ADBB3 /* ATCNearbyDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATCNearbyDetailsViewController.m; path = ViewControllers/ATCNearbyDetailsViewController.m; sourceTree = "<group>"; };
+		4FCF49931958CEB4007ADBB3 /* ATCFarContentDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCFarContentDetailsViewController.h; sourceTree = "<group>"; };
+		4FCF49941958CEB4007ADBB3 /* ATCFarContentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCFarContentDetailsViewController.m; sourceTree = "<group>"; };
+		4FCF49981958D5CC007ADBB3 /* ReusableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReusableDataSource.h; sourceTree = "<group>"; };
+		4FCF49991958D5CC007ADBB3 /* ReusableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReusableDataSource.m; sourceTree = "<group>"; };
+		4FCF499D1958D9B5007ADBB3 /* ATCNearbyStationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATCNearbyStationTableViewCell.h; path = Views/ATCNearbyStationTableViewCell.h; sourceTree = "<group>"; };
+		4FCF499E1958D9B5007ADBB3 /* ATCNearbyStationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATCNearbyStationTableViewCell.m; path = Views/ATCNearbyStationTableViewCell.m; sourceTree = "<group>"; };
+		4FCF49A71959D3E2007ADBB3 /* ToConsider */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToConsider; sourceTree = "<group>"; };
+		4FCF49AA1959D7F8007ADBB3 /* ATCBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATCBeacon.h; path = Models/ATCBeacon.h; sourceTree = "<group>"; };
+		4FCF49AB1959D7F8007ADBB3 /* ATCBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATCBeacon.m; path = Models/ATCBeacon.m; sourceTree = "<group>"; };
+		4FCF49AE1959D9DD007ADBB3 /* ATCContentContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATCContentContainerViewController.h; path = ViewControllers/ATCContentContainerViewController.h; sourceTree = "<group>"; };
+		4FCF49AF1959D9DD007ADBB3 /* ATCContentContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATCContentContainerViewController.m; path = ViewControllers/ATCContentContainerViewController.m; sourceTree = "<group>"; };
 		4FFC0C3A1953694300F75345 /* ATCBlueBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCBlueBackgroundView.h; sourceTree = "<group>"; };
 		4FFC0C3B1953694300F75345 /* ATCBlueBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCBlueBackgroundView.m; sourceTree = "<group>"; };
 		4FFC0C3F19536EC900F75345 /* ATCBeaconNetworkUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCBeaconNetworkUtilities.h; sourceTree = "<group>"; };
@@ -103,6 +134,7 @@
 		4FA9746B1948EB930031167C = {
 			isa = PBXGroup;
 			children = (
+				4FCF49A71959D3E2007ADBB3 /* ToConsider */,
 				4FA9747D1948EB930031167C /* ATCTrainingStations */,
 				4FA9749C1948EB930031167C /* ATCTrainingStationsTests */,
 				4FA974761948EB930031167C /* Frameworks */,
@@ -133,6 +165,8 @@
 		4FA9747D1948EB930031167C /* ATCTrainingStations */ = {
 			isa = PBXGroup;
 			children = (
+				4FCF499C1958D98D007ADBB3 /* Cells */,
+				4FCF49971958D5C2007ADBB3 /* Utilities */,
 				4FA974861948EB930031167C /* ATCAppDelegate.h */,
 				4FA974871948EB930031167C /* ATCAppDelegate.m */,
 				4FFC0C3A1953694300F75345 /* ATCBlueBackgroundView.h */,
@@ -140,8 +174,7 @@
 				4FFC0C4C195480D600F75345 /* Models */,
 				4FA974891948EB930031167C /* Main.storyboard */,
 				4FFC0C4519547F3500F75345 /* Managers */,
-				4FA9748C1948EB930031167C /* ATCViewController.h */,
-				4FA9748D1948EB930031167C /* ATCViewController.m */,
+				4FCF498A1958CBEA007ADBB3 /* View Controllers */,
 				4FA9748F1948EB930031167C /* Images.xcassets */,
 				4FA9747E1948EB930031167C /* Supporting Files */,
 			);
@@ -177,6 +210,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4FCF498A1958CBEA007ADBB3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4FA9748C1948EB930031167C /* ATCViewController.h */,
+				4FA9748D1948EB930031167C /* ATCViewController.m */,
+				4FCF498B1958CC10007ADBB3 /* ATCImmediateContentDetailsViewController.h */,
+				4FCF498C1958CC10007ADBB3 /* ATCImmediateContentDetailsViewController.m */,
+				4FCF49931958CEB4007ADBB3 /* ATCFarContentDetailsViewController.h */,
+				4FCF49941958CEB4007ADBB3 /* ATCFarContentDetailsViewController.m */,
+				4FCF498F1958CC5A007ADBB3 /* ATCNearbyDetailsViewController.h */,
+				4FCF49901958CC5A007ADBB3 /* ATCNearbyDetailsViewController.m */,
+				4FCF49AE1959D9DD007ADBB3 /* ATCContentContainerViewController.h */,
+				4FCF49AF1959D9DD007ADBB3 /* ATCContentContainerViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4FCF49971958D5C2007ADBB3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4FCF49981958D5CC007ADBB3 /* ReusableDataSource.h */,
+				4FCF49991958D5CC007ADBB3 /* ReusableDataSource.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		4FCF499C1958D98D007ADBB3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4FCF499D1958D9B5007ADBB3 /* ATCNearbyStationTableViewCell.h */,
+				4FCF499E1958D9B5007ADBB3 /* ATCNearbyStationTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		4FFC0C4519547F3500F75345 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +267,8 @@
 				4FFC0C4E1954826500F75345 /* ATCStation.m */,
 				4FFC0C501954843B00F75345 /* ATCContent.h */,
 				4FFC0C511954843C00F75345 /* ATCContent.m */,
+				4FCF49AA1959D7F8007ADBB3 /* ATCBeacon.h */,
+				4FCF49AB1959D7F8007ADBB3 /* ATCBeacon.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -280,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FCF49A81959D3E2007ADBB3 /* ToConsider in Resources */,
 				4FA974901948EB930031167C /* Images.xcassets in Resources */,
 				4FA974821948EB930031167C /* InfoPlist.strings in Resources */,
 				4FA9748B1948EB930031167C /* Main.storyboard in Resources */,
@@ -290,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FCF49A91959D3E2007ADBB3 /* ToConsider in Resources */,
 				4FA974A11948EB930031167C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,14 +374,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FFC0C4F1954826500F75345 /* ATCStation.m in Sources */,
+				4FCF49B01959D9DD007ADBB3 /* ATCContentContainerViewController.m in Sources */,
 				4FFC0C4419547DA100F75345 /* JMCBeaconManager.m in Sources */,
+				4FCF49911958CC5A007ADBB3 /* ATCNearbyDetailsViewController.m in Sources */,
 				4FFC0C4B195480D100F75345 /* ATCMission.m in Sources */,
+				4FCF498D1958CC10007ADBB3 /* ATCImmediateContentDetailsViewController.m in Sources */,
 				4FFC0C4119536EC900F75345 /* ATCBeaconNetworkUtilities.m in Sources */,
+				4FCF49AC1959D7F8007ADBB3 /* ATCBeacon.m in Sources */,
+				4FCF499A1958D5CC007ADBB3 /* ReusableDataSource.m in Sources */,
 				4FA974841948EB930031167C /* main.m in Sources */,
 				4FFC0C481954808900F75345 /* ATCApplicationState.m in Sources */,
+				4FCF499F1958D9B5007ADBB3 /* ATCNearbyStationTableViewCell.m in Sources */,
 				4FFC0C521954843C00F75345 /* ATCContent.m in Sources */,
 				4FFC0C3C1953694300F75345 /* ATCBlueBackgroundView.m in Sources */,
 				4FA9748E1948EB930031167C /* ATCViewController.m in Sources */,
+				4FCF49951958CEB4007ADBB3 /* ATCFarContentDetailsViewController.m in Sources */,
 				4FA974881948EB930031167C /* ATCAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +397,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FCF49A01958D9B5007ADBB3 /* ATCNearbyStationTableViewCell.m in Sources */,
+				4FCF49961958CEB4007ADBB3 /* ATCFarContentDetailsViewController.m in Sources */,
+				4FCF498E1958CC10007ADBB3 /* ATCImmediateContentDetailsViewController.m in Sources */,
+				4FCF49B11959D9DD007ADBB3 /* ATCContentContainerViewController.m in Sources */,
 				4FA974A31948EB930031167C /* ATCTrainingStationsTests.m in Sources */,
+				4FCF49921958CC5A007ADBB3 /* ATCNearbyDetailsViewController.m in Sources */,
+				4FCF49AD1959D7F8007ADBB3 /* ATCBeacon.m in Sources */,
+				4FCF499B1958D5CC007ADBB3 /* ReusableDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
