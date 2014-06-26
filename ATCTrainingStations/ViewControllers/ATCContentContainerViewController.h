@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "ATCBeacon.h"
+#import "ATCStation.h"
+
 @interface ATCContentContainerViewController : UIViewController
 
 @property(strong, nonatomic) ATCBeacon * beacon;
+@property(strong, nonatomic) ATCStation * station;
+@property(nonatomic, copy) void (^distanceChanged)(NSString * ATCStation);
 
 
 @end

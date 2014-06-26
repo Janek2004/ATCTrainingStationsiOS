@@ -86,29 +86,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="4RR-v0-O8H">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="People-Patient-Male-icon" translatesAutoresizingMaskIntoConstraints="NO" id="4RR-v0-O8H">
                                                     <rect key="frame" x="10" y="12" width="57" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sMW-Hg-5yV">
+                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="sMW-Hg-5yV">
                                                     <rect key="frame" x="122" y="50" width="118" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="maximumTrackTintColor" red="0.79607850309999995" green="0.12549020350000001" blue="0.15294118230000001" alpha="1" colorSpace="deviceRGB"/>
                                                 </slider>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="far" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UT-dz-Grg">
-                                                    <rect key="frame" x="100" y="57" width="27" height="15"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="close" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhA-nz-aem">
                                                     <rect key="frame" x="246" y="57" width="27" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Station Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WT-Rd-4cE">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="close" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhA-nz-aem">
+                                                    <rect key="frame" x="89" y="57" width="27" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jane Doe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WT-Rd-4cE">
                                                     <rect key="frame" x="100" y="23" width="173" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -120,7 +120,6 @@
                                             <outlet property="distanceSlider" destination="sMW-Hg-5yV" id="n5c-av-Aod"/>
                                             <outlet property="iconImageView" destination="4RR-v0-O8H" id="KQl-Uv-nVd"/>
                                             <outlet property="nameLabel" destination="0WT-Rd-4cE" id="oZZ-0f-kp4"/>
-                                            <segue destination="y4g-Pu-WJz" kind="push" id="axt-1e-AVe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -234,7 +233,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aY5-8Q-xz5">
                                 <rect key="frame" x="0.0" y="243" width="320" height="244"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">The UWF Department of Nursing is positioned to address these recommendations, offering an undergraduate program with both traditional nursing pre-licensure and RN to BSN bridge tracks. The number of baccalaureate students entering the pre-licensure program has increased to 50 and the RN-BSN track currently boasts &gt;100 students. Plans include adding an accelerated second degree track for adults who have a baccalaureate in another field and are making a mid-career change to nursing. An RN-BSN/MSN option is under consideration to allow qualified registered nurses a seamless transition to graduate education.</string>
+                                <mutableString key="text">The UWF Department of Nursing is positioned to address these recommendations, offering an undergraduate program with both traditional nursing pre-licensure and RN to BSN bridge tracks. The number of baccalaureate students entering the pre-licensure program has increased to 50 and the RN-BSN track currently boasts &gt;100 students. Plans include adding an accelerated second degree track for adults who have a baccalaureate in another field and are making a mid-career change to nursing. An RN-BSN/MSN option is under consideration to allow qualified registered nurses a seamless transition to graduate education.</mutableString>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -309,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1H-hv-9zM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-301" y="1628"/>
+            <point key="canvasLocation" x="-282" y="761"/>
         </scene>
         <!--Nearby Details View Controller - John Doe-->
         <scene sceneID="4ll-uY-vRJ">
@@ -323,45 +322,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="130" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TT-fP-7YX">
-                                <rect key="frame" x="95" y="507" width="130" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="41" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TT-fP-7YX">
+                                <rect key="frame" x="0.0" y="417" width="320" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="02F-qn-3Ww"/>
+                                </constraints>
                                 <state key="normal" title="Scan Patient">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="5EK-oC-wvE" kind="push" id="gwx-Zn-1gb"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="xlZ-qS-ZAW">
-                                <rect key="frame" x="9" y="79" width="50" height="62"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patient_Safety_and_Quality_h6" translatesAutoresizingMaskIntoConstraints="NO" id="kct-mD-h31">
+                                <rect key="frame" x="18" y="41" width="285" height="278"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="278" id="t0J-XZ-OEX"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="kct-mD-h31">
-                                <rect key="frame" x="106" y="253" width="108" height="133"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Come close to the patient to get more detailed information about him." translatesAutoresizingMaskIntoConstraints="NO" id="XL6-kp-NIp">
-                                <rect key="frame" x="67" y="79" width="241" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Come closer to the patient to get more detailed information about him." translatesAutoresizingMaskIntoConstraints="NO" id="XL6-kp-NIp">
+                                <rect key="frame" x="47" y="310" width="227" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="zAC-1z-cTc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jane Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3W-um-buk">
+                                <rect key="frame" x="69" y="29" width="183" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Mrm-fA-QSu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0TT-fP-7YX" firstAttribute="leading" secondItem="6uP-lJ-MmK" secondAttribute="leading" constant="95" id="KRN-r8-TT2"/>
-                            <constraint firstAttribute="bottom" secondItem="0TT-fP-7YX" secondAttribute="bottom" constant="31" id="yYP-ME-4eB"/>
+                            <constraint firstItem="XL6-kp-NIp" firstAttribute="centerX" secondItem="C3W-um-buk" secondAttribute="centerX" id="6KO-6l-bIH"/>
+                            <constraint firstAttribute="trailing" secondItem="0TT-fP-7YX" secondAttribute="trailing" id="6vA-h2-wBe"/>
+                            <constraint firstItem="kct-mD-h31" firstAttribute="leading" secondItem="6uP-lJ-MmK" secondAttribute="leading" constant="18" id="9kP-vH-ech"/>
+                            <constraint firstItem="0TT-fP-7YX" firstAttribute="leading" secondItem="6uP-lJ-MmK" secondAttribute="leading" id="KRN-r8-TT2"/>
+                            <constraint firstItem="XL6-kp-NIp" firstAttribute="centerX" secondItem="0TT-fP-7YX" secondAttribute="centerX" id="N4P-hk-1zQ"/>
+                            <constraint firstAttribute="trailing" secondItem="0TT-fP-7YX" secondAttribute="trailing" id="QVc-Hu-XMw"/>
+                            <constraint firstItem="XL6-kp-NIp" firstAttribute="top" secondItem="6uP-lJ-MmK" secondAttribute="top" constant="310" id="U2R-oV-dZp"/>
+                            <constraint firstItem="0TT-fP-7YX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6uP-lJ-MmK" secondAttribute="leading" id="bx4-fe-A4g"/>
+                            <constraint firstItem="kct-mD-h31" firstAttribute="centerX" secondItem="0TT-fP-7YX" secondAttribute="centerX" id="cKi-12-aAY"/>
+                            <constraint firstItem="C3W-um-buk" firstAttribute="top" secondItem="oI1-hQ-UD5" secondAttribute="bottom" constant="9" id="guj-4X-9Lq"/>
+                            <constraint firstAttribute="trailing" secondItem="XL6-kp-NIp" secondAttribute="trailing" constant="46" id="hqz-OT-enV"/>
+                            <constraint firstItem="kct-mD-h31" firstAttribute="top" secondItem="6uP-lJ-MmK" secondAttribute="top" constant="41" id="q5b-m4-bb0"/>
+                            <constraint firstItem="C3W-um-buk" firstAttribute="leading" secondItem="6uP-lJ-MmK" secondAttribute="leading" constant="69" id="u9c-Ng-CHl"/>
+                            <constraint firstItem="0TT-fP-7YX" firstAttribute="top" secondItem="XL6-kp-NIp" secondAttribute="bottom" constant="2" id="zfr-Nt-626"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="John Doe" id="Iph-cd-PUF"/>
+                    <connections>
+                        <outlet property="scanButton" destination="0TT-fP-7YX" id="zqh-gX-flh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kO-zD-SXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="165" y="1338"/>
+            <point key="canvasLocation" x="-766" y="2182"/>
         </scene>
-        <!--Immediate Content Details View Controller-->
+        <!--Immediate Content Details View Controller - Patient Details-->
         <scene sceneID="2ic-Sb-0wk">
             <objects>
                 <viewController storyboardIdentifier="ATCImmediateContentDetailsViewController" id="5EK-oC-wvE" customClass="ATCImmediateContentDetailsViewController" sceneMemberID="viewController">
@@ -370,25 +399,32 @@
                         <viewControllerLayoutGuide type="bottom" id="nrL-b1-uB9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jKC-x5-EpT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Gc-Rl-Ly9">
-                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Gc-Rl-Ly9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Gc-Rl-Ly9" firstAttribute="top" secondItem="jKC-x5-EpT" secondAttribute="top" id="7Zw-Nt-4pD"/>
+                            <constraint firstAttribute="trailing" secondItem="6Gc-Rl-Ly9" secondAttribute="trailing" id="FPk-aq-MMt"/>
+                            <constraint firstAttribute="bottom" secondItem="6Gc-Rl-Ly9" secondAttribute="bottom" id="dlR-zT-pbW"/>
+                            <constraint firstItem="6Gc-Rl-Ly9" firstAttribute="leading" secondItem="jKC-x5-EpT" secondAttribute="leading" id="lAF-Su-ZaZ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3Dm-jx-W8V"/>
+                    <navigationItem key="navigationItem" title="Patient Details" id="3Dm-jx-W8V"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="webview" destination="6Gc-Rl-Ly9" id="wGF-X3-PMW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PtL-6o-qLn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595" y="1277"/>
+            <point key="canvasLocation" x="-301" y="2182"/>
         </scene>
         <!--Content Container View Controller-->
         <scene sceneID="ukC-JB-4uJ">
@@ -406,9 +442,6 @@
                                 <rect key="frame" x="0.0" y="65" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="ZuZ-7O-0pb" kind="embed" id="9Ml-23-QiV"/>
-                                </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hI3-Ut-oaQ">
                                 <rect key="frame" x="42" y="533" width="236" height="29"/>
@@ -434,7 +467,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05L-zE-2jV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-673" y="1439"/>
+            <point key="canvasLocation" x="-707" y="761"/>
         </scene>
         <!--Distance Far-->
         <scene sceneID="Dnp-nh-eKZ">
@@ -475,7 +508,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdg-LA-rvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1170" y="1328"/>
+            <point key="canvasLocation" x="-1164" y="2182"/>
         </scene>
         <!--Settings-->
         <scene sceneID="OhK-R1-sPo">
@@ -523,30 +556,13 @@
             </objects>
             <point key="canvasLocation" x="165" y="-500"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="s2t-bz-iYL">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ZuZ-7O-0pb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9h5-BM-0TA"/>
-                        <viewControllerLayoutGuide type="bottom" id="18V-2X-FaL"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SaB-Nl-2yg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kt3-dD-hml" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="Janusz" width="75" height="100"/>
+        <image name="Patient_Safety_and_Quality_h6" width="294" height="234"/>
+        <image name="People-Patient-Male-icon" width="256" height="256"/>
         <image name="lab" width="440" height="248"/>
         <image name="nurse" width="128" height="128"/>
-        <image name="person_placeholder" width="134" height="134"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

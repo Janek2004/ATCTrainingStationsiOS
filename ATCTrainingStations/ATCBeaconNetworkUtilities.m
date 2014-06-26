@@ -52,12 +52,20 @@
     //form request
     assert(proximityID!=NULL);
     
-    NSString * urlstring =[NSString stringWithFormat:@"%@&major=%d&minor=%d&proximityID=%@",BEACON_URL,major,minor,proximityID];
+    NSString * urlstring =[NSString stringWithFormat:@"%@&beacon_major=%d&beacon_minor=%d&beacon_uuid=%@",BEACON_URL,major,minor,proximityID];
     
     NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlstring]];
     
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if(!data||connectionError){
+            if(!connectionError){
+                connectionError = [NSError new];
+            }
+            completionBlock(nil, connectionError);
+            return;
+        }
+        
         NSError * error;
         id object = [NSJSONSerialization
                      JSONObjectWithData:data

@@ -14,7 +14,7 @@
 
 -(void)registerBeaconWithProximityId:(NSString*)pid andIdentifier:(NSString *)identifier major:(int)major andMinor:(int)minor;
 -(NSString *)generateID:(NSString *)beaconId andMajor:(NSString *)major andMinor:(NSString *)minor;
--(void)registerBeaconWithProximityId:(NSString*)pid andIdentifier:(NSString *)identifier;
+//-(void)registerBeaconWithProximityId:(NSString*)pid andIdentifier:(NSString *)identifier;
 
 -(BOOL)isEnabled;
 -(BOOL)CanDeviceSupportAppBackgroundRefresh;

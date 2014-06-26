@@ -10,6 +10,7 @@
 #import "JMCBeaconManager.h"
 #import "ATCBeaconNetworkUtilities.h"
 #import "ATCAppDelegate.h"
+#import "ATCStation.h"
 
 @interface ATCApplicationState()
     @property(nonatomic, strong) JMCBeaconManager * beaconManager;
@@ -28,6 +29,7 @@
         [self startBeaconManager];
         [self getMissions];
     }
+    
     return self;
 }
 
@@ -45,27 +47,73 @@
         self.bluetoothEnabled = YES;
     }
     
-    __weak typeof(self) weakself = self;
-    [_beaconManager registerBeaconWithProximityId:BEACON_UUID andIdentifier:@"ATC Beacon Identifier"];
-    
+   // __weak typeof(self) weakself = self;
+   // [_beaconManager registerBeaconWithProximityId:BEACON_UUID andIdentifier:@"ATC Beacon Identifier"];
+    [_beaconManager registerBeaconWithProximityId:BEACON_UUID andIdentifier:@"ATC BEACON" major:-1 andMinor:-1];
     _beaconManager.beaconFound =^(int major, int minor, CLProximity  proximity){
         
+        NSString * hash = [NSString stringWithFormat:@"%d%d%@",major,minor,BEACON_UUID];
+        ATCApplicationState * strongSelf = self;
+        ATCStation * station = [strongSelf.stations objectForKey:hash];
+       
         
-        
-        // get content for beacon
-        [[weakself networkManager] getDataForBeaconMajor:major minor:minor proximityId: BEACON_UUID proximity:proximity WithCompletionHandler:^(NSDictionary *data, NSError *error) {
+        if(!station){
+            [[strongSelf networkManager] getDataForBeaconMajor:major minor:minor proximityId: BEACON_UUID proximity:proximity WithCompletionHandler:^(NSDictionary *data, NSError *error) {
+                NSLog(@"Data %@",data);
+                NSLog(@"Error %@",error);
+                 NSMutableDictionary * temp = strongSelf.stations;
+                if(!error && data){
+                    //save to dictionary
+                    
+                    ATCStation * station =[ATCStation new];
+                    station.dict = [data mutableCopy];
+                    station.proximity = proximity;
+                    station.hash = hash;
+                    [temp setObject:station forKey:hash];
+                }
+                strongSelf.stations = temp;
+            }];
+        }else{
+            NSMutableDictionary * temp = strongSelf.stations;
+            station.proximity = proximity;
+            [temp setObject:station forKey:hash];
+
+            if(proximity== CLProximityUnknown){
+                [temp removeObjectForKey:hash];
+               strongSelf.currentStation = NULL;
+            }
             
+            if(strongSelf){
+                
+            }
             
-        }];
+            @synchronized(strongSelf){
+                @try {
+                     strongSelf.stations = temp;
+                    
+                }
+                @catch (NSException * e) {
+                    NSLog(@"Exception: %@", e);
+                }
+                @finally {
+                    NSLog(@"finally");
+                }
+                
+               
         
-        // probably with timout?
-        
+                }
+            }
     };
-    
 }
 
+///create hash
+
+
+
+
 -(void)getMissions{
-      [ _networkManager getDataWithCompletionHandler:^(NSDictionary *data, NSError *error) {
+#warning FIX IT
+    [ _networkManager getDataWithCompletionHandler:^(NSDictionary *data, NSError *error) {
           if(!error){
               self.missions = [[data mutableCopy]objectForKey:@"missions"];
               //NSLog(@"%@",self.missions);
@@ -80,7 +128,7 @@
                       for(id station in a){
                           [locSt setObject:station forKey: [station objectForKey:@"id"]];
                       }
-                      self.stations = locSt;
+                      //self.stations = locSt;
                   }
                   else{
                       //NSLog(@"%@",object);

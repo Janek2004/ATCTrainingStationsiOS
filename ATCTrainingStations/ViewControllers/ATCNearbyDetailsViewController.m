@@ -9,6 +9,7 @@
 #import "ATCNearbyDetailsViewController.h"
 
 @interface ATCNearbyDetailsViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *scanButton;
 
 @end
 
@@ -33,6 +34,25 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)enable:(BOOL)scanning;{
+    [UIView animateWithDuration:2 animations:^{
+        if(!scanning){
+            self.scanButton.backgroundColor = [UIColor clearColor];
+            [self.scanButton setTintColor:[UIColor lightGrayColor]];
+        }
+        else{
+            self.scanButton.backgroundColor = [UIColor blueColor];
+            [self.scanButton setTintColor:[UIColor whiteColor]];
+        }
+        
+        
+    } completion:^(BOOL finished) {
+        self.scanButton.enabled = scanning;
+    }];
+    
+    NSLog(@" %d Scanning  %s ", scanning, __PRETTY_FUNCTION__);
 }
 
 /*

@@ -8,7 +8,7 @@
 
 #import "ATCImmediateContentDetailsViewController.h"
 
-@interface ATCImmediateContentDetailsViewController ()
+@interface ATCImmediateContentDetailsViewController ()<UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIWebView *webview;
 
 @end
@@ -24,14 +24,17 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSURL *targetURL = [NSURL URLWithString:@"http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/UIWebView_Class.pdf"];
+    NSURL *targetURL = [NSURL URLWithString:@"http://atcwebapp.argo.uwf.edu/trainingstations/wp_trainingstations/wp-content/uploads/2014/06/Juniorsimapp2.pdf"];
     NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
     
     [self.webview loadRequest:request];
+    self.webview.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning

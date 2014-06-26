@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ATCNearbyDetailsViewController : UIViewController
-
+    -(void)enable:(BOOL)scanning;
 @end

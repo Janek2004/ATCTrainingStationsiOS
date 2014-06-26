@@ -11,6 +11,7 @@
 #import "ATCAppDelegate.h"
 #import "ATCApplicationState.h"
 #import "ATCNearbyStationTableViewCell.h"
+#import "ATCStation.h"
 
 @interface ATCViewController ()<UITableViewDelegate>
 @property (nonatomic,strong) ReusableDataSource * dataSource;
@@ -47,8 +48,14 @@
 -(void)setupDatasource{
     NSLog(@" %@ ",self.appDelegate.application_state.stations.allValues);
     
-    self.dataSource = [[ReusableDataSource alloc]initWithItems:self.appDelegate.application_state.stations.allValues cellIdentifier:@"nearby_station_cell" configureCellBlock:^(ATCNearbyStationTableViewCell* cell, id item, id indexPath) {
-            NSLog(@"%@ ",cell);
+    self.dataSource = [[ReusableDataSource alloc]initWithItems:self.appDelegate.application_state.stations.allValues cellIdentifier:@"nearby_station_cell" configureCellBlock:^(ATCNearbyStationTableViewCell* cell, ATCStation * item, id indexPath) {
+            NSLog(@"%@ %s",item,__PRETTY_FUNCTION__);
+        if([item isKindOfClass:[ATCStation class]]){
+            [cell.distanceSlider setValue:item.proximity animated:YES];
+        
+        }
+        
+        
     }];
      self.tableView.delegate = self;
      self.tableView.dataSource = self.dataSource;
@@ -75,6 +82,14 @@
     }
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.appDelegate.application_state.currentStation =  [self.appDelegate.application_state.stations.allValues objectAtIndex:indexPath.row];
+    id vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ATCContentContainerViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+    
+}
 
 
 

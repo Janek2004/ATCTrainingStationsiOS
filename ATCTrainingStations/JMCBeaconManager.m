@@ -66,6 +66,8 @@
                              initWithUUIDString:pid];
     
     CLBeaconRegion *beaconRegion = [[CLBeaconRegion alloc]initWithProximityUUID:proximityUUID identifier:identifier];
+    beaconRegion= [[CLBeaconRegion alloc]initWithProximityUUID:proximityUUID identifier:identifier];
+    
     beaconRegion.notifyOnEntry=YES;
     beaconRegion.notifyOnExit=YES;
     beaconRegion.notifyEntryStateOnDisplay=YES;
@@ -84,7 +86,8 @@
     NSUUID *proximityUUID = [[NSUUID alloc]
                              initWithUUIDString:pid];
 
-    CLBeaconRegion *beaconRegion = [[CLBeaconRegion alloc]initWithProximityUUID:proximityUUID major:major identifier:identifier];
+    CLBeaconRegion *beaconRegion;// = [[CLBeaconRegion alloc]initWithProximityUUID:proximityUUID major:major identifier:identifier];
+    beaconRegion= [[CLBeaconRegion alloc]initWithProximityUUID:proximityUUID identifier:identifier];
     
     beaconRegion.notifyOnEntry=YES;
     beaconRegion.notifyOnExit=YES;
@@ -198,6 +201,7 @@
 
 /*Tells the delegate that a new region is being monitored.*/
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region{
+     [self.locationManager requestStateForRegion:region];
     NSString * log = [NSString stringWithFormat:@"%s",__PRETTY_FUNCTION__];
     [self logMessage:log];
     NSLog(@"%@",log);

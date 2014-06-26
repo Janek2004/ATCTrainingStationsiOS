@@ -14,6 +14,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #define BEACON_URL @"http://atcwebapp.argo.uwf.edu/trainingstations/wp_trainingstations/?missions_json=1"
-    #define BEACON_UUID @"ATC_BEACON"
+    #define BEACON_UUID @"B9407F30-F5F8-466E-AFF9-25556B57FE6D"
 
 #endif

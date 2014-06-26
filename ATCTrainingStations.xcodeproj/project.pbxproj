@@ -37,6 +37,7 @@
 		4FCF49AD1959D7F8007ADBB3 /* ATCBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49AB1959D7F8007ADBB3 /* ATCBeacon.m */; };
 		4FCF49B01959D9DD007ADBB3 /* ATCContentContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49AF1959D9DD007ADBB3 /* ATCContentContainerViewController.m */; };
 		4FCF49B11959D9DD007ADBB3 /* ATCContentContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCF49AF1959D9DD007ADBB3 /* ATCContentContainerViewController.m */; };
+		4FCF49B7195C4B57007ADBB3 /* Patient_Safety_and_Quality_h6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FCF49B6195C4B57007ADBB3 /* Patient_Safety_and_Quality_h6.png */; };
 		4FFC0C3C1953694300F75345 /* ATCBlueBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C3B1953694300F75345 /* ATCBlueBackgroundView.m */; };
 		4FFC0C4119536EC900F75345 /* ATCBeaconNetworkUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C4019536EC900F75345 /* ATCBeaconNetworkUtilities.m */; };
 		4FFC0C4419547DA100F75345 /* JMCBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC0C4319547DA100F75345 /* JMCBeaconManager.m */; };
@@ -91,6 +92,7 @@
 		4FCF49AB1959D7F8007ADBB3 /* ATCBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATCBeacon.m; path = Models/ATCBeacon.m; sourceTree = "<group>"; };
 		4FCF49AE1959D9DD007ADBB3 /* ATCContentContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATCContentContainerViewController.h; path = ViewControllers/ATCContentContainerViewController.h; sourceTree = "<group>"; };
 		4FCF49AF1959D9DD007ADBB3 /* ATCContentContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATCContentContainerViewController.m; path = ViewControllers/ATCContentContainerViewController.m; sourceTree = "<group>"; };
+		4FCF49B6195C4B57007ADBB3 /* Patient_Safety_and_Quality_h6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Patient_Safety_and_Quality_h6.png; sourceTree = "<group>"; };
 		4FFC0C3A1953694300F75345 /* ATCBlueBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCBlueBackgroundView.h; sourceTree = "<group>"; };
 		4FFC0C3B1953694300F75345 /* ATCBlueBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCBlueBackgroundView.m; sourceTree = "<group>"; };
 		4FFC0C3F19536EC900F75345 /* ATCBeaconNetworkUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCBeaconNetworkUtilities.h; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				4FCF49901958CC5A007ADBB3 /* ATCNearbyDetailsViewController.m */,
 				4FCF49AE1959D9DD007ADBB3 /* ATCContentContainerViewController.h */,
 				4FCF49AF1959D9DD007ADBB3 /* ATCContentContainerViewController.m */,
+				4FCF49B6195C4B57007ADBB3 /* Patient_Safety_and_Quality_h6.png */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				4FA974901948EB930031167C /* Images.xcassets in Resources */,
 				4FA974821948EB930031167C /* InfoPlist.strings in Resources */,
 				4FA9748B1948EB930031167C /* Main.storyboard in Resources */,
+				4FCF49B7195C4B57007ADBB3 /* Patient_Safety_and_Quality_h6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

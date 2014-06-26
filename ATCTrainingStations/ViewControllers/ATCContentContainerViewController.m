@@ -11,6 +11,10 @@
 #import "ATCImmediateContentDetailsViewController.h"
 #import "ATCNearbyDetailsViewController.h"
 #import "ATCFarContentDetailsViewController.h"
+#import "ATCAppDelegate.h"
+#import "ATCApplicationState.h"
+
+
 typedef enum kVCType : NSUInteger {
     kFar,
     kNearby,
@@ -25,7 +29,10 @@ typedef enum kVCType : NSUInteger {
 nearbyVC;
 @property(strong,nonatomic)ATCFarContentDetailsViewController *
 farVC;
+
 @property (strong, nonatomic) IBOutlet UISegmentedControl *distanceSegmentedControl;
+@property (nonatomic,strong) ATCAppDelegate * appDelegate;
+
 
 
 @end
@@ -38,9 +45,9 @@ farVC;
     self.immediateVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ATCImmediateContentDetailsViewController"];
     self.nearbyVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ATCNearbyDetailsViewController"];
     self.farVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ATCFarContentDetailsViewController"];
-
-    
-    
+    _appDelegate = [[UIApplication sharedApplication]delegate];
+    [self changeContentBasedOnStation:self.appDelegate.application_state.currentStation];
+    [self addObservers];
     
 }
 
@@ -82,8 +89,61 @@ farVC;
     
 }
 
+-(void)addObservers{
+    
+    [self.appDelegate.application_state addObserver:self forKeyPath:@"stations" options:NSKeyValueObservingOptionInitial context:nil];
+    
+}
 
+- (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context
+{
+   // NSLog(@" Keypath %@",keyPath);
+    if([keyPath isEqualToString:@"stations"]){
+        //NSLog(@"%@",[object stations]);
+        NSDictionary * stations = [object stations];
+        [self changeContentBasedOnStation:[stations objectForKey: self.station.hash]];
+    }
+    
+}
 
+-(void)changeContentBasedOnStation:(ATCStation *)station{
+    NSLog(@"%@ %s",station,__PRETTY_FUNCTION__);
+    
+    //see the dynamics of change
+    if(!station)
+    {
+        UIAlertView * al = [[UIAlertView alloc]initWithTitle:@"" message:@"You just left the region" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        
+        [al show];
+    }
+    else{
+
+        if((self.station == NULL && station.proximity == CLProximityNear)||(self.station == NULL && station.proximity == CLProximityImmediate )||(self.station == NULL && station.proximity == CLProximityFar )){
+
+             [self addChildViewController:self.nearbyVC];
+             self.nearbyVC.view.frame  = self.containerView.bounds;
+             [self.containerView addSubview:self.nearbyVC.view];
+             [self.nearbyVC didMoveToParentViewController:self];
+        }
+        
+        if(self.station.proximity == CLProximityImmediate && station.proximity == CLProximityNear){
+            //don't do anything
+        
+        }
+        
+        if(station.proximity == CLProximityImmediate){
+            //enable the button
+            [self.nearbyVC enable:YES];
+        
+        }
+        else{
+            [self.nearbyVC enable:NO];
+        }
+    
+        self.station = station;
+        
+    }
+}
 
 
 

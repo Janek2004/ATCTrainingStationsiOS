@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ATCContent.h"
+@import CoreLocation;
 
 @interface ATCStation : NSObject
     
@@ -21,5 +22,11 @@
     @property(nonatomic,strong) NSArray * immediateContent;
     @property(nonatomic,strong) NSArray * nearbyContent;
     @property(nonatomic,strong) NSArray * farContent;
+
+    @property (nonatomic,strong) NSMutableDictionary * dict;
+    @property (nonatomic,assign) CLProximity  proximity;
+    @property (nonatomic,assign) NSString * hash;
+
+
 
 @end
