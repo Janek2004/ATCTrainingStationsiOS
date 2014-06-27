@@ -71,10 +71,10 @@
 
 - (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context
 {
-    NSLog(@" Keypath %@",keyPath);
+    //NSLog(@" Keypath %@",keyPath);
     if([keyPath isEqualToString:@"stations"]){
-        NSLog(@"Dictionary %@",change);
-        NSLog(@"%@",[object stations]);
+     //   NSLog(@"Dictionary %@",change);
+     //   NSLog(@"%@",[object stations]);
         [self setupDatasource];
     }
     else if([keyPath isEqualToString:@"bluetoothEnabled"]){
@@ -82,13 +82,16 @@
     }
 }
 
+-(void)viewDidDisappear:(BOOL)animated{
+   // [self.appDelegate.application_state removeObserver:self forKeyPath:@"stations"];
+}
+
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.appDelegate.application_state.currentStation =  [self.appDelegate.application_state.stations.allValues objectAtIndex:indexPath.row];
     id vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ATCContentContainerViewController"];
     [self.navigationController pushViewController:vc animated:YES];
-    
-    
-    
+   
 }
 
 

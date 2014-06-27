@@ -16,9 +16,10 @@
 */
 -(void)getDataWithCompletionHandler:(void (^)(NSDictionary *data, NSError *error))completionBlock{
     NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:BEACON_URL]];
-    //NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
-   //[connection start];
+
+    
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        self.dataCompletionBlock = completionBlock;
              NSError * error;
         if(!data){
              NSLog(@" Data not available ");
@@ -32,12 +33,13 @@
         
         if(error) {
             NSLog(@"Error %@",error);
-            completionBlock(nil, error);
+            
+            self.dataCompletionBlock(nil, error);
             return;
         }
         if([object isKindOfClass:[NSDictionary class]]){
              NSDictionary *results = object;
-             completionBlock(results, error);
+              self.dataCompletionBlock(results, error);
             
             
              //NSLog(@"%@",results);
@@ -51,6 +53,8 @@
 -(void)getDataForBeaconMajor:(int)major minor:(int)minor proximityId:(NSString *)proximityID proximity:(CLProximity) proximity  WithCompletionHandler:(void (^)(NSDictionary *data, NSError *error))completionBlock;{
     //form request
     assert(proximityID!=NULL);
+    self.beaconCompletionBlock = completionBlock;
+    
     
     NSString * urlstring =[NSString stringWithFormat:@"%@&beacon_major=%d&beacon_minor=%d&beacon_uuid=%@",BEACON_URL,major,minor,proximityID];
     
@@ -62,8 +66,10 @@
             if(!connectionError){
                 connectionError = [NSError new];
             }
-            completionBlock(nil, connectionError);
-            return;
+            if(self.beaconCompletionBlock){
+                self.beaconCompletionBlock(nil, connectionError);
+            }
+                return;
         }
         
         NSError * error;
@@ -74,13 +80,17 @@
         
         if(error) {
             NSLog(@"Error %@",error);
-            completionBlock(nil, error);
+            if(self.beaconCompletionBlock){
+                self.beaconCompletionBlock(nil, error);
+            }
+
             return;
         }
         if([object isKindOfClass:[NSDictionary class]]){
             NSDictionary *results = object;
-            completionBlock(results, error);
-            
+            if(self.beaconCompletionBlock){
+                self.beaconCompletionBlock(results, error);
+            }
             
             //NSLog(@"%@",results);
         }else

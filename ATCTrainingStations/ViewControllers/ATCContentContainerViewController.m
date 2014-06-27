@@ -97,13 +97,19 @@ farVC;
 
 - (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context
 {
-   // NSLog(@" Keypath %@",keyPath);
     if([keyPath isEqualToString:@"stations"]){
-        //NSLog(@"%@",[object stations]);
         NSDictionary * stations = [object stations];
-        [self changeContentBasedOnStation:[stations objectForKey: self.station.hash]];
+        @try {
+            [self changeContentBasedOnStation:[stations objectForKey: self.station.hash]];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Exception %@",exception);
+        }
+        @finally {
+            NSLog(@"ATC");
+        }
+
     }
-    
 }
 
 -(void)changeContentBasedOnStation:(ATCStation *)station{
@@ -145,6 +151,16 @@ farVC;
     }
 }
 
+
+-(void)viewWillDisappear:(BOOL)animated{
+   
+    
+}
+-(void)dealloc{
+    [self.appDelegate.application_state removeObserver:self forKeyPath:@"stations"];
+    NSLog(@" %s",__PRETTY_FUNCTION__);
+    
+}
 
 
 
